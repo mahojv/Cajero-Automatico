@@ -7,7 +7,11 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(0.637 0.237 25.331);
+    --color-cyan-50: oklch(0.984 0.019 200.873);
+    --color-gray-600: oklch(0.446 0.03 256.802);
     --spacing: 0.25rem;
+    --text-7xl: 4.5rem;
+    --text-7xl--line-height: 1;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -423,6 +427,12 @@
   }
   .aspect-square {
     aspect-ratio: 1 / 1;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .h-lvh {
+    height: 100lvh;
   }
   .h-screen {
     height: 100vh;
@@ -1042,6 +1052,9 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
+  .bg-gray-600 {
+    background-color: var(--color-gray-600);
+  }
   .bg-red-500 {
     background-color: var(--color-red-500);
   }
@@ -1259,6 +1272,10 @@
   .align-top {
     vertical-align: top;
   }
+  .text-7xl {
+    font-size: var(--text-7xl);
+    line-height: var(--tw-leading, var(--text-7xl--line-height));
+  }
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
@@ -1335,6 +1352,9 @@
   }
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
+  }
+  .text-cyan-50 {
+    color: var(--color-cyan-50);
   }
   .capitalize {
     text-transform: capitalize;
